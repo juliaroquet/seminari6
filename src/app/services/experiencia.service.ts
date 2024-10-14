@@ -30,8 +30,7 @@ export class ExperienciaService {
   // experience.service.ts
 
 // Obtener las experiencias de un usuario específico
-getExperienciasByUserId(userId: string): Observable<Experiencia[]> {
-  return this.http.get<Experiencia[]>(`${this.apiUrl}/usuario/${userId}`);
-}
+getExperienciasByUserName(userName: string): Observable<Experiencia[]> {
+  return this.http.get<Experiencia[]>(`${this.apiUrl}?userName=${userName}`);
 
-}
+}}
